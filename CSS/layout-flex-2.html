@@ -6,19 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         .container {
             width: 1200px;
             margin: auto;
             display: flex;
+            background-color: #ccc;
         }
         .box {
-            width: calc(100% / 3);
+            /* width: calc(100% / 3); */
+            flex-basis: calc(100% / 5);
             padding: 15px;
-            background-color: #fa0;
         }
-        .box:nth-of-type(1){order:1;}
-        .box:nth-of-type(2){order:2;}
-        .box:nth-of-type(3){order:3;}
+        .box:nth-of-type(1){
+            flex-grow:1;
+            background-color: #A03C78;
+            order:1;
+        }
+        .box:nth-of-type(2){
+            flex-grow:4;
+            background-color: #93D9A3;
+            order:2;
+        }
+        .box:nth-of-type(3){
+            flex-grow:1;
+            background-color: #ED8E7C;
+            order:3;
+        }
     </style>
 </head>
 <body>
