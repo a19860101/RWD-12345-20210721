@@ -17,6 +17,12 @@
         .container {
             width: 1200px;
             margin: auto;
+
+            background-color: #ccc;
+
+            /* height: 400px; */
+            /* overflow: auto; */
+            display: flow-root;
         }
         .box {
             width: 400px;
@@ -28,6 +34,10 @@
             background-color: #ff7575;
             padding: 15px;
         }
+        /* 
+            父元素高度崩塌
+            當所有子元素都是浮動時，父元素高度會歸零
+        */
     </style>
 </head>
 <body>
