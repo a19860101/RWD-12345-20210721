@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+        }
+        .blue {
+            background-color: #0af;
+                        
+            /* top: 10px; */
+            left: 50px;
+            /* right: 50px; */
+            bottom: 50px;
+
+            z-index: 2;
+        }
+        .red {
+            background-color: #e04;
+        }
+        .green {
+            background-color: #488646;
+            bottom: 100px;
+            left: 100px;
+            z-index: 1;
+        }
+        .pink {
+            background-color: pink;
+        }
+        .static {
+            position: static;
+            background-color: #444;
+        }
+        .relative {
+            position: relative;
+
+        }
+        .absolute {
+            position: absolute;
+        }
+        .fixed {
+            position: fixed;
+        }
+        .sticky {
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        定位 Position 
+        1. static 靜態
+        2. relative 相對 (top,bottom,left,right,z-index)
+        3. absolute 絕對
+        4. fixed 固定
+        5. sticky 黏性
+    -->
+    <div class="box static"></div>
+    <div class="box relative blue"></div>
+    <div class="box relative green"></div>
+</body>
+</html>
