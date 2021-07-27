@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+        }
+        .box {
+            width: calc(100% / 3);
+            padding: 15px;
+            background-color: #fa0;
+        }
+        .box:nth-of-type(1){order:1;}
+        .box:nth-of-type(2){order:2;}
+        .box:nth-of-type(3){order:3;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>001</h2>
+        </div>
+        <div class="box">
+            <h2>002</h2>
+        </div>
+        <div class="box">
+            <h2>003</h2>
+        </div>
+    </div>
+</body>
+</html>
