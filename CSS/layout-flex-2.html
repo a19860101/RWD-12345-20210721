@@ -13,28 +13,37 @@
             width: 1200px;
             margin: auto;
             display: flex;
+            flex-wrap: wrap;
             background-color: #ccc;
         }
         .box {
             /* width: calc(100% / 3); */
-            flex-basis: calc(100% / 5);
+            flex-basis: 500px;
             padding: 15px;
         }
         .box:nth-of-type(1){
-            flex-grow:1;
+            flex-grow:0;
+            flex-shrink: 1;
             background-color: #A03C78;
             order:1;
         }
         .box:nth-of-type(2){
-            flex-grow:4;
+            flex-grow:0;
+            flex-shrink: 1;
             background-color: #93D9A3;
             order:2;
         }
         .box:nth-of-type(3){
-            flex-grow:1;
+            flex-grow:0;
+            flex-shrink: 1;
             background-color: #ED8E7C;
             order:3;
         }
+        /* 
+            flex-grow 延展 預設為關閉
+            flex-shrink 壓縮 預設為開啟，會與flex-wrap衝突。若flex-wrap設定為wrap，則flex-shrink等同關閉
+
+        */
     </style>
 </head>
 <body>
