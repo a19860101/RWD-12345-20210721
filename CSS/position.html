@@ -25,8 +25,8 @@
         }
         .red {
             background-color: #e04;
-            bottom: 200px;
-            left: 300px;
+            top: 0;
+            right: 0;
         }
         .green {
             background-color: #488646;
@@ -54,6 +54,13 @@
         .sticky {
             position: sticky;
         }
+
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+        }
     </style>
 </head>
 <body>
@@ -61,13 +68,16 @@
         定位 Position 
         1. static 靜態
         2. relative 相對 (top,bottom,left,right,z-index)
-        3. absolute 絕對
+        3. absolute 絕對 (top,bottom,left,right,z-index)
         4. fixed 固定
         5. sticky 黏性
     -->
     <div class="box static"></div>
     <div class="box relative blue"></div>
     <div class="box relative green"></div>
-    <div class="box absolute red"></div>
+    
+    <div class="container">
+        <div class="box absolute red"></div>
+    </div>
 </body>
 </html>
