@@ -1,3 +1,14 @@
+:root {
+    --blue: #57caff;
+    --red:#ff3434;
+    --green: #00b94d;
+    --orange: #ffc042;
+    --dark: #181818;
+    --light: #dbdbdb;
+    --black: #000;
+    --white: #fff;
+    --gray: #949494;
+}
 * {
     box-sizing: border-box;
 }
@@ -28,4 +39,24 @@ nav, header, footer
 .t-none {text-decoration: none;}
 .t-underline {text-decoration: underline;}
 .t-line-through {text-decoration: line-through;}
+/* color */
+.t-blue {color: var(--blue);}
+.t-red {color: var(--red);}
+.t-green {color: var(--green);}
+.t-orange {color: var(--orange);}
+.t-dark {color: var(--dark);}
+.t-light {color: var(--light);}
+.t-black {color: var(--black);}
+.t-white {color: var(--white);}
+.t-gray {color: var(--gray);}
+/* background-color */
+.bg-blue {background-color: var(--blue);}
+.bg-red {background-color: var(--red);}
+.bg-green {background-color: var(--green);}
+.bg-orange {background-color: var(--orange);}
+.bg-dark {background-color: var(--dark);}
+.bg-light {background-color: var(--light);}
+.bg-black {background-color: var(--black);}
+.bg-white {background-color: var(--white);}
+.bg-gray {background-color: var(--gray);}
 
