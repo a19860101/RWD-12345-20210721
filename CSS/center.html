@@ -24,7 +24,7 @@
             至少要兩層
             容易破版
         */
-        .container {
+        /* .container {
             display: table;
         }
         .content {
@@ -35,6 +35,32 @@
         p {
             width: 50%;
             margin: auto;
+        } */
+        /* 
+            方法三 flex
+        */
+        /* .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            width: 50%;
+            text-align: center;
+        } */
+        /* 
+            方法四: padding
+            無法確認高度
+        */
+        .container {
+            height: initial;
+            padding-top: 200px;
+            padding-bottom: 200px;
+        }
+        .content {
+            width: 50%;
+            margin: auto;
+            text-align: center;
         }
     </style>
 </head>
@@ -42,6 +68,11 @@
     <div class="container">
         <div class="content">
             <h1>title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
         </div>
     </div>
