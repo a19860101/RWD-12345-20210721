@@ -8,3 +8,24 @@ nav, header, footer
     padding: 0;
     border: 0;
 }
+/* width */
+.w-25 {width: 25%;}
+.w-50 {width: 50%;}
+.w-75 {width: 75%;}
+.w-100 {width: 100%;}
+/* height */
+.h-25 {height: 25%;}
+.h-50 {height: 50%;}
+.h-75 {height: 75%;}
+.h-100 {height: 100%;}
+.h-100vh {height: 100vh;}
+/* text-align */
+.t-left {text-align: left;}
+.t-right {text-align: right;}
+.t-center {text-align: center;}
+.t-justify {text-align: justify;}
+/* text-decoration */
+.t-none {text-decoration: none;}
+.t-underline {text-decoration: underline;}
+.t-line-through {text-decoration: line-through;}
+
