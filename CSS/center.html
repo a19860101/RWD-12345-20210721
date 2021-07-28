@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+        }
+        /* 
+            方法一 : line-height 行高 
+            只適合單行文字
+        */
+        /* .content {
+            text-align: center;
+            line-height: 600px;
+        } */
+        /* 
+            方法二: table-cell,table 假表格
+            至少要兩層
+            容易破版
+        */
+        .container {
+            display: table;
+        }
+        .content {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        p {
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
+        </div>
+    </div>
+</body>
+</html>
