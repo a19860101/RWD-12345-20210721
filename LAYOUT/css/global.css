@@ -21,6 +21,10 @@ nav, header, footer
     padding: 0;
     border: 0;
 }
+.img-cover {
+    object-fit: cover;
+    object-position: center;
+}
 /* width */
 .w-25 {width: 25%;}
 .w-50 {width: 50%;}
