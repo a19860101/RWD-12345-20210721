@@ -268,3 +268,7 @@ nav, header, footer
 .radius-5 {border-radius: calc(var(--size) * 5);}
 .radius-6 {border-radius: calc(var(--size) * 6);}
 .radius-circle {border-radius: 50%;}
+
+.overflow-hidden {overflow: hidden;}
+.overflow-scroll {overflow: scroll;}
+.overflow-auto {overflow: auto;}
