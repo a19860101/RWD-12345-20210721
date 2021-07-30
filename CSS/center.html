@@ -52,7 +52,7 @@
             方法四: padding
             無法確認高度
         */
-        .container {
+        /* .container {
             height: initial;
             padding-top: 200px;
             padding-bottom: 200px;
@@ -61,6 +61,21 @@
             width: 50%;
             margin: auto;
             text-align: center;
+        } */
+        /* 
+            方法五: transform
+        */
+        .container {
+            position: relative;
+        }
+        .content {
+            width: 60%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: #a7ffdd;
+            transform: translateX(-50%)translateY(-50%);
+            padding: 15px;
         }
     </style>
 </head>
@@ -68,11 +83,6 @@
     <div class="container">
         <div class="content">
             <h1>title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis eaque, voluptatibus obcaecati, modi eos praesentium cumque sint ipsa laudantium numquam vitae autem reiciendis minus delectus libero. Voluptatem, ipsa. Est, corporis.</p>
         </div>
     </div>
