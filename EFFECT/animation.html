@@ -11,8 +11,9 @@
             position: absolute;
             padding: 15px;
             font-size: 3em;
+            color: #0ff7ff;
 
-            animation: fade-out 3s;
+            animation: move 5s;
         }
         @keyframes marquee {
             from {
@@ -35,6 +36,13 @@
                 transform: translateY(20px);
                 opacity: 0;
             }
+        }
+        @keyframes move {
+            0% {}
+            25% {transform:translate(400px,0)rotate(90deg);color: red;}
+            50% {transform:translate(400px,400px)rotate(180deg);color:chartreuse;}
+            75% {transform:translate(0,400px)rotate(270deg);color: cornflowerblue;}
+            100% {transform:translate(0,0)rotate(360deg);}
         }
     </style>
 </head>
