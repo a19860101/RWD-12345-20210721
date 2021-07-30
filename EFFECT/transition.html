@@ -18,14 +18,17 @@
 
             /* transition: 1s; */
 
-            /* 
-            transition-property: transform, background-color;
-            transition-duration: 1s;
-            transition-delay: 0s;
+            
+            /* transition-property: transform, background-color;
+            transition-duration: 2s;
+            transition-delay: 0s,2s;
             transition-timing-function: ease; */
             /* ease, ease-in, ease-in-out, ease-out, linear */
 
-            transition: all 1s 1s ease-in-out; 
+            /* transition: all 1s 1s ease-in-out;  */
+
+            transition:transform 2s 0s,background-color 2s 2s;
+            transition-timing-function: linear;
         }
         /* 虛擬類別 */
         .box:hover {
