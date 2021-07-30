@@ -16,7 +16,16 @@
             left: 50%;
             transform: translate(-50%,-50%);
 
-            transition: 1s;
+            /* transition: 1s; */
+
+            /* 
+            transition-property: transform, background-color;
+            transition-duration: 1s;
+            transition-delay: 0s;
+            transition-timing-function: ease; */
+            /* ease, ease-in, ease-in-out, ease-out, linear */
+
+            transition: all 1s 1s ease-in-out; 
         }
         /* 虛擬類別 */
         .box:hover {
