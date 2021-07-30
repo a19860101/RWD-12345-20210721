@@ -10,9 +10,11 @@
     --gray: #949494;
     --spacing: 5px;
     --size: 5px;
+    font-size: 14px;
 }
 * {
     box-sizing: border-box;
+    font-family: "Noto Sans TC";
 }
 html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,div,span,a,img
 nav, header, footer
