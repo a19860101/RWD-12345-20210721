@@ -276,3 +276,10 @@ img {
 .overflow-hidden {overflow: hidden;}
 .overflow-scroll {overflow: scroll;}
 .overflow-auto {overflow: auto;}
+
+.hr-dark {
+    border-bottom: 1px solid var(--dark);
+}
+.hr-light {
+    border-bottom: 1px solid var(--light);
+}
