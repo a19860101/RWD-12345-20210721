@@ -16,10 +16,12 @@
         .carousel {
             transform-style: preserve-3d;/*預置3D*/
             transition:3s;
+
+            animation: r 5s infinite;
         }
-        .space:hover .carousel {
+        /* .space:hover .carousel {
             transform: rotateY(360deg);
-        }
+        } */
         .plane {
             opacity: .7;
         }
@@ -51,6 +53,10 @@
         .plane:nth-of-type(6){
             background-color: #69004d;
             transform: rotateY(calc(60deg * 5))translateZ(346.4px);
+        }
+        @keyframes r {
+            from {}
+            to {transform: rotateY(360deg)}
         }
     </style>
 </head>
