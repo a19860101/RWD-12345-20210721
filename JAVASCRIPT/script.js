@@ -21,11 +21,24 @@ console.log(a,b);
 var x = 'hello';
 console.log(x);
 
-let a = 444;
 
 /* 
-    var vs let
-    1. let 不可重複宣告
-    2. var為function scope,let為block scope
+    var vs let,const
+    1. let,const 不可重複宣告
+    2. var為function scope,let,constant為block scope
 
 */
+
+//常數 Constant Varible
+// const不可重新賦值,let可以
+
+const i = 6;
+
+console.log(i);
+
+/* 
+    i = 666;
+    會出現錯誤，因為不可重新賦值給i
+*/
+
+
