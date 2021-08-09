@@ -24,3 +24,12 @@ console.log(x == y);
 console.log(x === y);//值與資料型態皆須相同
 console.log(a === b);//值與資料型態皆須相同
 console.log(x != y);
+
+//指定(賦值)運算子
+console.log(x += 3); //x = x + 3
+console.log(x -= 3); //x = x - 3
+console.log(x *= 3); //x = x * 3
+console.log(x /= 3); //x = x / 3
+console.log(x %= 3); //x = x % 3
+
+console.log(x+y);
