@@ -2,7 +2,7 @@
 
 
 let x = 100;
-let y = 60;
+let y = -60;
 
 let a = 100; // Number
 let b = '100'; // String
@@ -26,10 +26,19 @@ console.log(a === b);//值與資料型態皆須相同
 console.log(x != y);
 
 //指定(賦值)運算子
-console.log(x += 3); //x = x + 3
-console.log(x -= 3); //x = x - 3
-console.log(x *= 3); //x = x * 3
-console.log(x /= 3); //x = x / 3
-console.log(x %= 3); //x = x % 3
+// console.log(x += 3); //x = x + 3
+// console.log(x -= 3); //x = x - 3
+// console.log(x *= 3); //x = x * 3
+// console.log(x /= 3); //x = x / 3
+// console.log(x %= 3); //x = x % 3
 
-console.log(x+y);
+// console.log(x+y);
+
+//邏輯運算子 && || !
+console.log(x > 0 && y > 0);
+console.log(x > 0 || y > 0);
+
+let z = 0;
+console.log(!z);
+
+//  |  -> shift + \
