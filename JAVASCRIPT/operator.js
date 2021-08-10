@@ -42,3 +42,18 @@ let z = 0;
 console.log(!z);
 
 //  |  -> shift + \
+
+// 字串運算子
+
+let s = 'HELLO';
+let s2 = 'WORLD!';
+// console.log(s + ' ' + s2);
+// console.log(s + a);
+
+let user = 'John';
+// 字串樣板
+
+console.log(`hello ${user}`);
+console.log(`${s} ${user}`);
+
+// 三元運算子
