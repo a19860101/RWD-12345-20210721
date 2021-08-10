@@ -94,8 +94,15 @@ console.log(drinks_map)
 // reduce
 let num = [12,22,33,44,65];
 let total = num.reduce(function(a,b){
-    console.log('a',a);
-    console.log('b',b);
+    // console.log('a',a);
+    // console.log('b',b);
     return a+b;
 })
 console.log(total);
+
+// concat
+console.log(a.concat(drinks));
+console.log(drinks.concat(a));
+
+let q = [...drinks,...a,'test'];
+console.log(q);
