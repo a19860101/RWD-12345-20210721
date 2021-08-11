@@ -75,5 +75,13 @@
             </p>
         </div>
     </div>
+    <script>
+        let tabLinks = [...document.querySelectorAll('.tab-link')];
+        for(let tabLink of tabLinks){
+            tabLink.onclick = function(){
+                console.log(this);
+            }
+        }
+    </script>
 </body>
 </html>
