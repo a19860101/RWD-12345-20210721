@@ -24,6 +24,7 @@
             color: #000;
             padding: 10px 15px;
             display: inline-block;
+            transition: .4s;
         }
         .tab-link.active {
             background-color: #b7fff3;
@@ -32,9 +33,19 @@
             background-color: #b7fff3;
             padding: 15px;
             display: none;
+            transform-origin: top;
         }
         .tab-panel.active {
             display: block;
+            animation: fade-in .6s;
+        }
+        @keyframes fade-in {
+            from {opacity:0;transform:translateY(6px)}
+            to {}
+        }
+        @keyframes fade-in-2 {
+            from {opacity:0;transform:scaleY(0)}
+            to {}
         }
     </style>
 </head>
