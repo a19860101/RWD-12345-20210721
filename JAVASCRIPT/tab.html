@@ -79,7 +79,10 @@
         let tabLinks = [...document.querySelectorAll('.tab-link')];
         for(let tabLink of tabLinks){
             tabLink.onclick = function(){
-                console.log(this);
+                for(let tabLink of tabLinks){
+                    tabLink.classList.remove('active');
+                }
+                this.classList.add('active');
             }
         }
     </script>
