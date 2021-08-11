@@ -19,6 +19,7 @@
         <li class="item">list 3</li>
         <li class="item">list 4</li>
     </ul>
+    <!-- <a href="#" onclick="test()">link</a> -->
     <a href="#">link</a>
     
     <script>
@@ -31,7 +32,7 @@
         
         // let li = document.getElementsByTagName('li');
         // console.log(li);
-        
+
         // let content = document.getElementsByClassName('content');
         // console.log(content);
 
@@ -60,6 +61,21 @@
         // let items_array = Array.from(items_1);
         // let items_array = [...items_2];
         // console.log(items_array);
+
+        function test(){
+            let content = document.querySelector('.content');
+            content.style.color = 'red';
+        }
+
+        let a = document.querySelector('a');
+        // a.onclick = function(){
+        //     test();
+        // }
+
+        // a.addEventListener('click',function(){
+        //     test();
+        // });
+        a.addEventListener('click',test);
     </script>
 </body>
 </html>
