@@ -24,20 +24,42 @@
     <script>
         // let title = document.getElementById('title');
         // console.log(title);
-        // let items = document.getElementsByClassName('item');
-        // console.log(items);
+
+        let items_1 = [...document.getElementsByClassName('item')];
+        // let items_1 = Array.from(document.getElementsByClassName('item'));
+        console.log(items_1);
+        
         // let li = document.getElementsByTagName('li');
         // console.log(li);
+        
         // let content = document.getElementsByClassName('content');
         // console.log(content);
 
         let title = document.querySelector('#title');
         console.log(title);
-        let items = document.querySelectorAll('.item');
-        console.log(items);
+
+        // let items_2 = [...document.querySelectorAll('.item')];
+        let items_2 = Array.from(document.querySelectorAll('.item'));
+        console.log(items_2);
+
         let content = document.querySelector('.content');
         console.log(content);
 
+
+        title.style.color = 'red';
+        // for(let i=0;i<items.length;i++){
+        //     items[i].style.color = 'red';
+        // }
+        // for(let item of items){
+        //     item.style.color = 'pink';
+        // }
+    
+        // console.log(items_1);
+        // console.log(items_2);
+
+        // let items_array = Array.from(items_1);
+        // let items_array = [...items_2];
+        // console.log(items_array);
     </script>
 </body>
 </html>
