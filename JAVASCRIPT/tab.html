@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "segoe ui";
+        }
+        .tab {
+            width: 600px;
+            margin: auto;
+        }
+        .tab-nav {
+            background-color: #ccc;
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #000;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        .tab-link.active {
+            background-color: #b7fff3;
+        }
+        .tab-panel {
+            background-color: #b7fff3;
+            padding: 15px;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">tab 1</a>
+            <a href="#" class="tab-link">tab 2</a>
+            <a href="#" class="tab-link">tab 3</a>
+            <a href="#" class="tab-link">tab 4</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h2>tab 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h2>tab 2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h2>tab 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!</p>
+        </div>
+        <div class="tab-panel" id="tab-4">
+            <h2>tab 4</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio neque minus minima? Veritatis ratione expedita iusto fugit animi, rerum repellendus quaerat doloribus in magnam facere quas, optio iste? Quas, reiciendis!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
