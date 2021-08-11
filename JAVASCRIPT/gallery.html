@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
         .gallery {
-            width: 600px;
+            width:500px;
             margin: auto;
         }
         .thumbs {
@@ -34,5 +34,16 @@
             <img src="images/5243305_500.jpg" class="thumb">
         </div>
     </div>
+    <script>
+        let thumbs = [...document.querySelectorAll('.thumb')];
+
+        thumbs.forEach(function(thumb){
+            thumb.onclick = function(){
+                let newImg = this.getAttribute('src');
+                document.querySelector('.main').setAttribute('src',newImg);
+            }
+        })
+
+    </script>
 </body>
 </html>
