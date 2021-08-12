@@ -43,7 +43,7 @@
     <a href="#" class="modal-btn" data-target="#modal-2">modal 2</a>
 
     <div class="modal" id="modal-1">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>MODAL 1</h3>
@@ -54,12 +54,12 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <a href="#">CLOSE</a>
+                <a href="#" class="modal-close">CLOSE</a>
             </div>
         </div>
     </div>
     <div class="modal" id="modal-2">
-        <div class="modal-overlay"></div>
+        <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
             <div class="modal-header">
                 <h3>MODAL 2</h3>
@@ -76,7 +76,7 @@
                 </p>
             </div>
             <div class="modal-footer">
-                <a href="#">CLOSE</a>
+                <a href="#" class="modal-close">CLOSE</a>
             </div>
         </div>
     </div>
@@ -88,6 +88,14 @@
                 document.querySelector(target).classList.add('active');
             }
         })
+        document.onclick = function(e){
+            if(e.target.className.indexOf('modal-close') > -1){
+                let modals = document.querySelectorAll('.modal');
+                for(let m of modals){
+                    m.classList.remove('active');
+                }
+            }
+        }
     </script>
 </body>
 </html>
