@@ -7,7 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <label for="">區分大小寫</label>
     <input type="text" id="search">
+    <label for="">不區分大小寫</label>
+    <input type="text" id="search2">
     <ul>
         <li>熟成紅茶</li>
         <li>麗春紅茶</li>
@@ -30,6 +33,18 @@
             let drinks = [...document.querySelectorAll('li')];
             for(let drink of drinks){
                 if(drink.textContent.indexOf(input) > -1){
+                    drink.style.display = '';
+                }else{
+                    drink.style.display = 'none';
+                }
+            }
+        }
+        let search2 = document.querySelector('#search2');
+        search2.onkeyup = function(){
+            let input = search2.value;
+            let drinks = [...document.querySelectorAll('li')];
+            for(let drink of drinks){
+                if(drink.textContent.toUpperCase().indexOf(input.toUpperCase()) > -1){
                     drink.style.display = '';
                 }else{
                     drink.style.display = 'none';
