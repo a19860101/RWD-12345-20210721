@@ -21,13 +21,19 @@
         .thumbs img {
             width: 100px;
         }
+        .thumb {
+            transition: .4s;
+        }
+        .thumb.active {
+            opacity: .6;
+        }
     </style>
 </head>
 <body>
     <div class="gallery">
         <img src="images/5243301_500.jpg" class="main">
         <div class="thumbs">
-            <img src="images/5243301_500.jpg" class="thumb">
+            <img src="images/5243301_500.jpg" class="thumb active">
             <img src="images/5243302_500.jpg" class="thumb">
             <img src="images/5243303_500.jpg" class="thumb">
             <img src="images/5243304_500.jpg" class="thumb">
@@ -41,6 +47,10 @@
             thumb.onclick = function(){
                 let newImg = this.getAttribute('src');
                 document.querySelector('.main').setAttribute('src',newImg);
+                for(let thumb of thumbs){
+                    thumb.classList.remove('active');
+                }
+                this.classList.add('active');
             }
         })
 
