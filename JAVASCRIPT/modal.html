@@ -39,10 +39,10 @@
     </style>
 </head>
 <body>
-    <a href="#">modal 1</a>
-    <a href="#">modal 2</a>
+    <a href="#" class="modal-btn" data-target="#modal-1">modal 1</a>
+    <a href="#" class="modal-btn" data-target="#modal-2">modal 2</a>
 
-    <div class="modal">
+    <div class="modal" id="modal-1">
         <div class="modal-overlay"></div>
         <div class="modal-container">
             <div class="modal-header">
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <div class="modal">
+    <div class="modal" id="modal-2">
         <div class="modal-overlay"></div>
         <div class="modal-container">
             <div class="modal-header">
@@ -80,5 +80,14 @@
             </div>
         </div>
     </div>
+    <script>
+        let modalBtns = [...document.querySelectorAll('.modal-btn')];
+        modalBtns.forEach(function(modalBtn){
+            modalBtn.onclick = function(){
+                let target = this.dataset.target;
+                document.querySelector(target).classList.add('active');
+            }
+        })
+    </script>
 </body>
 </html>
