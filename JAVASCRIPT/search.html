@@ -27,7 +27,14 @@
         let search = document.querySelector('#search');
         search.onkeyup = function(){
             let input = search.value;
-            console.log(input);
+            let drinks = [...document.querySelectorAll('li')];
+            for(let drink of drinks){
+                if(drink.textContent.indexOf(input) > -1){
+                    drink.style.display = '';
+                }else{
+                    drink.style.display = 'none';
+                }
+            }
         }
     </script>
 </body>
