@@ -12,11 +12,10 @@
             box-sizing: border-box;
         }
         .modal {
-            display: none;
+            /* display: none; */
         }
         .modal.active{
-            display: block;
-            animation: fade-in .5s;
+            /* display: block; */
         }
         .modal-overlay {
             position: fixed;
@@ -25,24 +24,33 @@
             background-color: rgba(0,0,0,.8);
             top: 0;
             left: 0;
+
+            opacity: 0;
+            z-index: -1;
+            transition: .5s;
         }
         .modal-container {
             background-color: #fff;
-            position: relative;
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 15%;
+            position: absolute;
             padding: 30px;
             border-radius: 10px;
-        }
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-            to {}
-        }
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%)translateY(-100%);
 
+            opacity: 0;
+            z-index: -1;
+            transition: .5s;
+        }
+        .modal.active .modal-overlay {
+            opacity: 1;
+            z-index: 2;
+        }
+        .modal.active .modal-container {
+            opacity: 1;
+            z-index: 3;
+            transform: translateX(-50%)translateY(0);
+        }
     </style>
 </head>
 <body>
