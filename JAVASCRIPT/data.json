@@ -88,5 +88,23 @@
         "color":"紅色",
         "price":"29000",
         "size":"256GB"
+    },
+    {
+        "title":"iPhone 12",
+        "color":"紫色",
+        "price":"26900",
+        "size":"64GB"
+    },
+    {
+        "title":"iPhone 12",
+        "color":"紫色",
+        "price":"25500",
+        "size":"128GB"
+    },
+    {
+        "title":"iPhone 12",
+        "color":"紫色",
+        "price":"29000",
+        "size":"256GB"
     }
 ]

@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+
+    </div>
     <script>
         let url = 'data.json';
         fetch(url)
@@ -15,8 +18,16 @@
             return res.json();
         })
         .then(function(data){
-            let phone = data;
-            console.log(phone);
+            data.forEach(function(d){
+                console.log(d.price);
+                let container = document.querySelector('.container');
+                let div = document.createElement('div');
+                let content = `
+                    ${d.title},${d.color},${d.size},${d.price}
+                `;
+                div.append(content);
+                container.append(div);
+            })
         })
     </script>
 </body>
