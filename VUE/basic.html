@@ -13,10 +13,15 @@
         <h1>{{title}}</h1>
         <div v-if="onsale == false">售價 {{price}}</div>
         <div v-else>特價 {{price * 0.8}}</div>
+        <input type="checkbox" v-model="onsale">{{onsale}}
         <p>
             {{desc}}
         </p>
         <div>您是第 {{n}} 使用者</div>
+
+        <input type="text" v-model="input">
+        <div>{{input}}</div>
+        <br>
         <a :href="link" v-bind:target="target">LINK!!</a>
         <ul>
             <li v-for="(drink,idx) of drinks">{{drink}} -- {{idx}}</li>
@@ -40,7 +45,8 @@
                     link: 'https://tw.yahoo.com',
                     target: '_blank',
                     price: 15900,
-                    onsale: true,
+                    onsale: false,
+                    input:'test',
                     drinks: ['紅茶', '綠茶', '珍珠奶茶', '拿鐵'],
                     items: [
                         {
