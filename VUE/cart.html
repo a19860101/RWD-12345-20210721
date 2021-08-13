@@ -11,6 +11,7 @@
 
 <body>
     <div id="app">
+        <div>{{cartItems}}</div>
         <!-- 選單 -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
             <div class="container-fluid">
@@ -58,7 +59,7 @@
                                 售價 {{product.price}}
                             </span>
                             <span>
-                                <a href="#" class="btn btn-outline-danger btn-sm">加入購物車</a>
+                                <a href="javascript:;" class="btn btn-outline-danger btn-sm" @click="addToCart(idx)">加入購物車</a>
                             </span>
                         </div>
                     </div>
@@ -72,6 +73,7 @@
         Vue.createApp({
             data() {
                 return {
+                    cartItems:[],
                     products: [
                         {
                             "title": "iPhone 12",
@@ -200,6 +202,13 @@
                             "size": "256GB"
                         }
                     ]
+                }
+            },
+            methods:{
+                //加入購物車
+                addToCart(idx){
+                    // console.log(this.products[idx])
+                    this.cartItems.push(this.products[idx]);
                 }
             }
         }).mount('#app');
