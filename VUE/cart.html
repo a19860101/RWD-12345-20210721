@@ -54,13 +54,16 @@
                     <a href="javascript:;" class="btn btn-danger btn-sm">移除</a>
                     <hr>
                 </div>
-                <div class="d-flex justify-content-between">
-                    <span>總金額</span>
-                    <span>$ 0</span>
-                </div>
-                <div>
-                    <a href="javascript:;" class="btn btn-danger btn-sm">清空購物車</a>
-                </div>
+                <div v-if="cartItems == 0">空的喔!!</div>
+                <template v-else>
+                    <div class="d-flex justify-content-between">
+                        <span>總金額</span>
+                        <span>$ 0</span>
+                    </div>
+                    <div>
+                        <a href="javascript:;" class="btn btn-danger btn-sm" @click="clearCart()">清空購物車</a>
+                    </div>
+                </template>
             </div>
         </div>
         <!-- 產品列表 -->
@@ -225,6 +228,11 @@
                 addToCart(idx){
                     // console.log(this.products[idx])
                     this.cartItems.push(this.products[idx]);
+                },
+                clearCart(){
+                    if(confirm('確認清空所有購物車?')){
+                        this.cartItems.length = 0;
+                    }
                 }
             }
         }).mount('#app');
