@@ -13,6 +13,7 @@
             {{desc}}
         </p>
         <div>您是第 {{n}} 使用者</div>
+        <a :href="link" v-bind:target="target">LINK!!</a>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
@@ -21,7 +22,9 @@
                 return {
                     title: 'Hello Vue!!!!',
                     desc: 'asdf asdf asdf asdf',
-                    n: 123123
+                    n: 123123,
+                    link: 'https://tw.yahoo.com',
+                    target: '_blank'
                 }
             }
         }).mount('#app');
