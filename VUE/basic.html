@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="app">
         <h1>{{title}}</h1>
+        <div v-if="onsale == false">售價 {{price}}</div>
+        <div v-else>特價 {{price * 0.8}}</div>
         <p>
             {{desc}}
         </p>
         <div>您是第 {{n}} 使用者</div>
         <a :href="link" v-bind:target="target">LINK!!</a>
+        <ul>
+            <li v-for="(drink,idx) of drinks">{{drink}} -- {{idx}}</li>
+        </ul>
+        <ul>
+            <li v-for="(item,idx) in items">
+                <div>品項:{{item.name}}</div>
+                <div>價格:{{item.price}}</div>
+                <div>容量:{{item.size}}</div>
+            </li>
+        </ul>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
         Vue.createApp({
-            data(){
+            data() {
                 return {
-                    title: 'Hello Vue!!!!',
+                    title: 'iPhone',
                     desc: 'asdf asdf asdf asdf',
                     n: 123123,
                     link: 'https://tw.yahoo.com',
-                    target: '_blank'
+                    target: '_blank',
+                    price: 15900,
+                    onsale: true,
+                    drinks: ['紅茶', '綠茶', '珍珠奶茶', '拿鐵'],
+                    items: [
+                        {
+                            name: '紅茶',
+                            price: 20,
+                            size: '750ml'
+                        },
+                        {
+                            name: '綠茶',
+                            price: 20,
+                            size: '750ml'
+                        },
+                        {
+                            name: '奶茶',
+                            price: 20,
+                            size: '750ml'
+                        },
+                        {
+                            name: '珍珠奶茶',
+                            price: 30,
+                            size: '500ml'
+                        },
+                        {
+                            name: '冰淇淋紅茶',
+                            price: 40,
+                            size: '500ml'
+                        }
+                    ]
                 }
             }
         }).mount('#app');
     </script>
 </body>
+
 </html>
