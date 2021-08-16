@@ -11,6 +11,7 @@
 
 <body>
     <div id="app">
+        {{priceArray}}
         <!-- 選單 -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
             <div class="container-fluid">
@@ -242,7 +243,15 @@
                         this.cartItems.splice(idx,1);
                     }
                 }
-
+            },
+            computed:{
+                priceArray(){
+                    // this.cartItems.map(function(data){
+                    //     return data.price;
+                    // })
+                    // return this.cartItems.map( data => data.praice );
+                    return this.cartItems.map( data => {console.log(data.price)} );
+                }
             }
         }).mount('#app');
 
