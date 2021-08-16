@@ -35,6 +35,10 @@
             <span v-else-if="qty < 10 && qty > 0">低庫存</span>
             <span v-else>補貨中</span>
         </div>
+        <div>
+            <button v-if="qty > 0">加入購物車</button>
+            <button v-else disabled>補貨中</button>
+        </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
