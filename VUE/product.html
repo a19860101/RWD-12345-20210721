@@ -17,7 +17,7 @@
 
 <body>
     <div id="app">
-        <h2>{{title}}</h2>
+        <h2>{{title}} {{size}} ({{color}})</h2>
         <div>
             <img :src="`images/${img}`" alt="">
         </div>
@@ -26,6 +26,9 @@
         </div>
         <div>
             <div v-for="product,idx in products" class="colorBox" :style="{backgroundColor:product.hex}"></div>
+        </div>
+        <div>
+            剩餘數量 {{qty}}
         </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
@@ -82,7 +85,7 @@
                 return {
                     products:datas,
                     title: 'iPhone 12',
-                    img: 'iphone-12-blue-select-2020.png',
+                    // img: 'iphone-12-blue-select-2020.png',
                     seletedIndex:0 //目前選取的那一個
                 }
             },
@@ -94,6 +97,23 @@
                 changeIndex(idx){
                     this.seletedIndex = idx;
                     console.log(this.seletedIndex);
+                }
+            },
+            computed:{
+                idx(){
+                    return this.products[this.seletedIndex];
+                },
+                img(){
+                    return this.idx.img;
+                },
+                color(){
+                    return this.idx.color;
+                },
+                qty(){
+                    return this.idx.qty;
+                },
+                size(){
+                    return this.idx.size
                 }
             }
         }).mount('#app');
