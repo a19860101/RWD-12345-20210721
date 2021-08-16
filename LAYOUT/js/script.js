@@ -4,8 +4,7 @@ const app = Vue.createApp({
     }
 });
 app.component('app-nav',{
-    template: `
-        <nav class="bg-white d-flex justify-content-md-between align-items-md-center py-5 fixed w-100" style="z-index:999;">
+    template: `<nav class="bg-white d-flex justify-content-md-between align-items-md-center py-5 fixed w-100" style="z-index:999;">
             <a href="#" class="t-dark t-none mx-3 t-weight-800" style="font-size: 2em;">unipapa</a>
             <div class="mr-auto d-none d-md-block">
                 <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">居家清潔</a>
