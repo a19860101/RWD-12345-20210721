@@ -22,7 +22,7 @@
             <img :src="`images/${img}`" alt="">
         </div>
         <div>
-            <img v-for="product,idx in products" :src="`images/${product.img}`" width="100">
+            <img v-for="product,idx in products" :src="`images/${product.img}`" width="100" @click="changeIndex(idx)">
         </div>
         <div>
             <div v-for="product,idx in products" class="colorBox" :style="{backgroundColor:product.hex}"></div>
@@ -37,7 +37,8 @@
                 "color": "藍色",
                 "hex":"#123456",
                 "price": "26900",
-                "size": "64GB"
+                "size": "64GB",
+                "qty":18
             },
             {
                 "title": "iPhone 12",
@@ -45,7 +46,8 @@
                 "color": "紅色",
                 "hex":"red",
                 "price": "26900",
-                "size": "64GB"
+                "size": "64GB",
+                "qty":12
             },
             {
                 "title": "iPhone 12",
@@ -53,7 +55,8 @@
                 "color": "綠色",
                 "hex":"green",
                 "price": "26900",
-                "size": "64GB"
+                "size": "64GB",
+                "qty":1
             },
             {
                 "title": "iPhone 12",
@@ -61,7 +64,8 @@
                 "color": "黑色",
                 "hex":"#000",
                 "price": "26900",
-                "size": "64GB"
+                "size": "64GB",
+                "qty":0
             },
             {
                 "title": "iPhone 12",
@@ -69,7 +73,8 @@
                 "color": "紫色",
                 "hex":"purple",
                 "price": "26900",
-                "size": "64GB"
+                "size": "64GB",
+                "qty":6
             },
         ];
         Vue.createApp({
@@ -77,7 +82,18 @@
                 return {
                     products:datas,
                     title: 'iPhone 12',
-                    img: 'iphone-12-blue-select-2020.png'
+                    img: 'iphone-12-blue-select-2020.png',
+                    seletedIndex:0 //目前選取的那一個
+                }
+            },
+            methods:{
+                changeImg(idx){
+                    this.img = this.products[idx].img
+                    // console.log(this.products[idx].img);
+                },
+                changeIndex(idx){
+                    this.seletedIndex = idx;
+                    console.log(this.seletedIndex);
                 }
             }
         }).mount('#app');
