@@ -30,6 +30,11 @@
         <div>
             剩餘數量 {{qty}}
         </div>
+        <div>
+            <span v-if="qty >= 10">熱賣中</span>
+            <span v-else-if="qty < 10 && qty > 0">低庫存</span>
+            <span v-else>補貨中</span>
+        </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
