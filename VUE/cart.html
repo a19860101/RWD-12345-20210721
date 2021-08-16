@@ -61,6 +61,7 @@
                 <template v-else>
                     <div class="d-flex justify-content-between">
                         <span>總金額</span>
+                        <span>$ {{total}}</span>
                         <span>$ {{totalPrice}}</span>
                     </div>
                     <div>
@@ -245,7 +246,8 @@
             },
             computed:{
                 priceArray(){
-                    // this.cartItems.map(function(data){
+                    // return this.cartItems;
+                    // return this.cartItems.map(function(data){
                     //     return data.price;
                     // })
                     return this.cartItems.map( data => data.price );
@@ -253,10 +255,17 @@
                 },
                 totalPrice(){
                     if(this.cartItems.length > 0){
-                        // this.priceArray.reduce(function(a,b){
-                        //     return a + b;
+                        // return this.priceArray.reduce(function(a,b){
+                        //     return parseInt(a) + parseInt(b);
                         // })
                         return this.priceArray.reduce((a,b) => parseInt(a) + parseInt(b));
+                    }else{
+                        return 0;
+                    }
+                },
+                total(){
+                    if(this.cartItems.length > 0){
+                        return this.cartItems.map(data=>data.price).reduce((a,b) => parseInt(a) + parseInt(b));
                     }else{
                         return 0;
                     }
