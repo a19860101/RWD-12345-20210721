@@ -1,6 +1,25 @@
 const app = Vue.createApp({
     data(){
-        return {}
+        return {
+            active:[
+                {
+                    img:'https://picsum.photos/id/99/800/600',
+                    title: '五周年限定，白色好神拖強勢回歸'
+                },
+                {
+                    img:'https://picsum.photos/id/98/800/600',
+                    title: '家的深呼吸'
+                },
+                {
+                    img:'https://picsum.photos/id/91/800/600',
+                    title: '夏日蚊蟲攻防計畫'
+                },
+                {
+                    img:'https://picsum.photos/id/96/800/600',
+                    title: '朝零阿罵'
+                }
+            ]
+        }
     }
 });
 app.component('app-nav',{

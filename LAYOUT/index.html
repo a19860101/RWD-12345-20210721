@@ -31,17 +31,17 @@
         <div class="col-12">
             <h2 class="mb-5 t-weight-500">活動特輯</h2>
         </div>
-        <div class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
+        <div v-for="act in active" class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
             <a href="#" class="t-none">
                 <div class="border-light radius-3 overflow-hidden ani">
-                    <img src="https://picsum.photos/id/99/800/600" class="img-cover w-100 h-100">
+                    <img :src="act.img" class="img-cover w-100 h-100">
                     <div class="t-dark p-2">
-                        五周年限定，白色好神拖強勢回歸
+                        {{act.title}}
                     </div>
                 </div>
             </a>
         </div>
-        <div class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
+        <!-- <div class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
             <a href="#" class="t-none">
                 <div class="border-light radius-3 overflow-hidden ani">
                     <img src="https://picsum.photos/id/96/800/600" class="img-cover w-100 h-100">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
     </div>
     <div class="container row py-6">
         <div class="col-12">
