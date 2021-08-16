@@ -10,13 +10,15 @@
 </head>
 <body>
     <div id="app">
-        <app-title></app-title>
-        <app-subtitle></app-subtitle>
-        <app-title></app-title>
-        <app-subtitle></app-subtitle>
-        <app-title></app-title>
-        <app-subtitle></app-subtitle>
-    </div>    
+        <app-nav></app-nav>
+    </div>   
+    <template id="app-nav">
+        <nav>
+            <a href="#">link 1</a>
+            <a href="#">link 2</a>
+            <a href="#">link 3</a>
+        </nav>
+    </template> 
     <script>
         const app = Vue.createApp({
             date(){
@@ -30,6 +32,9 @@
         });
         app.component('app-subtitle',{
             template:'<p>12345 54321</p>'
+        })
+        app.component('app-nav',{
+            template:'#app-nav'
         })
         app.mount('#app')
     </script>
