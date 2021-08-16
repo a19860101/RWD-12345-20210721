@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        const datas = [
+            {
+                "title": "iPhone 12",
+                "img": "iphone-12-blue-select-2020.png",
+                "color": "藍色",
+                "price": "26900",
+                "size": "64GB"
+            },
+            {
+                "title": "iPhone 12",
+                "img": "iphone-12-red-select-2020.png",
+                "color": "紅色",
+                "price": "26900",
+                "size": "64GB"
+            },
+            {
+                "title": "iPhone 12",
+                "img": "iphone-12-green-select-2020.png",
+                "color": "綠色",
+                "price": "26900",
+                "size": "64GB"
+            },
+            {
+                "title": "iPhone 12",
+                "img": "iphone-12-black-select-2020.png",
+                "color": "黑色",
+                "price": "26900",
+                "size": "64GB"
+            },
+            {
+                "title": "iPhone 12",
+                "img": "iphone-12-purple-select-2021.png",
+                "color": "紫色",
+                "price": "26900",
+                "size": "64GB"
+            },
+        ];
+        Vue.createApp({
+            data(){
+                return {
+                    products:datas
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
