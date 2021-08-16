@@ -10,7 +10,10 @@
 </head>
 <body>
     <div id="app">
+        <app-title></app-title>
         <app-nav></app-nav>
+        <app-banner></app-banner>
+        <app-icon></app-icon>
     </div>   
     <template id="app-nav">
         <nav>
@@ -18,15 +21,30 @@
             <a href="#">link 2</a>
             <a href="#">link 3</a>
         </nav>
+
     </template> 
+    <template id="app-icon">
+        <img src="https://picsum.photos/id/22/200/100">
+    </template>
     <script>
         const app = Vue.createApp({
-            date(){
+            data(){
                 return {
 
                 }
+            },
+            //區域註冊
+            components:{
+                'app-banner':{
+                    template:`<img src="https://picsum.photos/id/23/200/100">`
+                },
+                'app-icon': {
+                    template: '#app-icon'
+                }
             }
         });
+
+        //全域註冊
         app.component('app-title',{
             template:'<h1>HELLO WORLD 123</h1>'
         });
