@@ -6,10 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .colorBox {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app">
+        <h2>{{title}}</h2>
+        <div>
+            <img :src="`images/${img}`" alt="">
+        </div>
+        <div>
+            <img v-for="product,idx in products" :src="`images/${product.img}`" width="100">
+        </div>
+        <div>
+            <div v-for="product,idx in products" class="colorBox" :style="{backgroundColor:product.hex}"></div>
+        </div>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script>
@@ -18,6 +35,7 @@
                 "title": "iPhone 12",
                 "img": "iphone-12-blue-select-2020.png",
                 "color": "藍色",
+                "hex":"#123456",
                 "price": "26900",
                 "size": "64GB"
             },
@@ -25,6 +43,7 @@
                 "title": "iPhone 12",
                 "img": "iphone-12-red-select-2020.png",
                 "color": "紅色",
+                "hex":"red",
                 "price": "26900",
                 "size": "64GB"
             },
@@ -32,6 +51,7 @@
                 "title": "iPhone 12",
                 "img": "iphone-12-green-select-2020.png",
                 "color": "綠色",
+                "hex":"green",
                 "price": "26900",
                 "size": "64GB"
             },
@@ -39,6 +59,7 @@
                 "title": "iPhone 12",
                 "img": "iphone-12-black-select-2020.png",
                 "color": "黑色",
+                "hex":"#000",
                 "price": "26900",
                 "size": "64GB"
             },
@@ -46,6 +67,7 @@
                 "title": "iPhone 12",
                 "img": "iphone-12-purple-select-2021.png",
                 "color": "紫色",
+                "hex":"purple",
                 "price": "26900",
                 "size": "64GB"
             },
@@ -53,7 +75,9 @@
         Vue.createApp({
             data(){
                 return {
-                    products:datas
+                    products:datas,
+                    title: 'iPhone 12',
+                    img: 'iphone-12-blue-select-2020.png'
                 }
             }
         }).mount('#app');
