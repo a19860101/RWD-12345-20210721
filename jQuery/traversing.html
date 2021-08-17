@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>title</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quaerat similique tenetur optio est! Odit atque, fugiat quas veniam id, saepe modi dicta rem nobis accusantium facilis aperiam! Cumque, accusamus.
+        </p>
+        <ul>
+            <li><a href="#">link 1</a></li>
+            <li><a href="#">link 2</a></li>
+            <li><a href="#">link 3</a></li>
+            <li><a href="#">link 4</a></li>
+        </ul>
+    </div>
+    <script>
+        $(function(){
+            // 子元素
+            // let target = $('.container').children();
+            // let target = $('.container').children('h1');
+            // let target = $('.container').find('a');
+
+            // 父元素
+            // let target = $('li').parent();
+            // let target = $('li').parents('body');
+            // let target = $('li').closest('.container');
+
+            // 同輩元素
+            // let target = $('p').next();
+            // let target = $('p').prev();
+            // let target = $('li').eq(3).text();
+            let target = $('p').siblings();
+
+            console.log(target);
+        })
+    </script>
+</body>
+</html>
