@@ -21,12 +21,22 @@
             background-color: #dfdfdf;
             padding: 8px 15px;
             border-bottom: 1px solid #000;
+            transition: .5s;
+            cursor: pointer;
+        }
+        .accordion-title:hover {
+            background-color: #ff2566;
+            color: #fff;
         }
         .accordion-content {
             padding: 15px;
             background-color: #ccc;
             display: none;
             border-bottom: 1px solid #777;
+        }
+        .accordion-title.active {
+            background-color: #ff2566;
+            color: #fff;
         }
     </style>
 </head>
@@ -57,6 +67,7 @@
                 // $(this).next().toggle(600);
                 // $(this).next().fadeToggle();
                 $(this).next().slideToggle();
+                $(this).toggleClass('active');
             })
 
         })
