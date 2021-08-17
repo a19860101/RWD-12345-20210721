@@ -40,14 +40,58 @@
 </head>
 <body>
     <nav>
-        <a href="#">About</a>
-        <a href="#">Product</a>
-        <a href="#">Service</a>
-        <a href="#">Contact</a>
+        <a href="#about" data-target="#about">About</a>
+        <a href="#product" data-target="#product">Product</a>
+        <a href="#service" data-target="#service">Service</a>
+        <a href="#contact" data-target="#contact">Contact</a>
     </nav>
     <div id="about"></div>
     <div id="product"></div>
     <div id="service"></div>
     <div id="contact"></div>
+    <script>
+        $(function(){
+            $('nav').find('a').eq(0).click(function(){
+                let href = $(this).attr('href'); // getAttribute
+                let target = $(this).data('target'); // dataset
+                let offset = $(href).offset().top;
+
+                console.log(offset);
+                $('html,body').animate({
+                    scrollTop: offset
+                });
+            })
+            $('nav').find('a').eq(1).click(function(){
+                let href = $(this).attr('href'); // getAttribute
+                let target = $(this).data('target'); // dataset
+                let offset = $(href).offset().top;
+
+                console.log(offset);
+                $('html,body').animate({
+                    scrollTop: offset
+                });
+            })
+            $('nav').find('a').eq(2).click(function(){
+                let href = $(this).attr('href'); // getAttribute
+                let target = $(this).data('target'); // dataset
+                let offset = $(href).offset().top;
+
+                console.log(offset);
+                $('html,body').animate({
+                    scrollTop: offset
+                });
+            })
+            $('nav').find('a').eq(3).click(function(){
+                let href = $(this).attr('href'); // getAttribute
+                let target = $(this).data('target'); // dataset
+                let offset = $(href).offset().top;
+
+                console.log(offset);
+                $('html,body').animate({
+                    scrollTop: offset
+                });
+            })
+        })
+    </script>
 </body>
 </html>
