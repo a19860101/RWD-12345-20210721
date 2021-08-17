@@ -15,32 +15,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="bg-white d-flex justify-content-md-between align-items-md-center py-5 fixed w-100" style="z-index:999;">
-            <a href="#" class="t-dark t-none mx-3 t-weight-800" style="font-size: 2em;">unipapa</a>
-            <div class="mr-auto d-none d-md-block">
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">居家清潔</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">防蚊防蟲</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">電器製品</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">雜貨日用品</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">選物推薦</a>
-            </div>
-            <div class=" d-none d-md-block">
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3"><i class="fas fa-search fa-lg"></i></a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3"><i class="fas fa-shopping-cart fa-lg"></i></i></a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">登入</a>
-            </div>
-            <a href="#" class="absolute t-dark d-md-none d-block" style="top: 35px;right: 30px;"><i class="fas fa-bars fa-2x"></i></a>
-        </nav>
-        <header class="relative">
-            <a href="#" class="d-block">
-                <img src="images/banner-1.jpg" alt="" class="w-100 fade-in-0">
-                <div class="absolute w-75 t-center">
-                    <div class="t-blue t-weight-500 fade-in-1">好評熱賣款</div>
-                    <h2 class="t-dark mt-2 mb-4 t-weight-900 fade-in-2">有序延長線</h2>
-                    <p class="t-dark fade-in-3">加大孔距，隨處固定，讓空間井然有序</p>
-                </div>
-            </a>
-        </header>    <div class="container relative" style="padding:80px 0">
+    <app-nav></app-nav>
+    <app-header></app-header>
+    <div class="container relative" style="padding:80px 0">
         <div class="row">
             <div class="col-12">
                 <a href="#" class="d-block" style="height:150px">
@@ -54,7 +31,7 @@
         <div class="col-12">
             <h2 class="mb-5 t-weight-500">活動特輯</h2>
         </div>
-        <div class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
+        <div v-for="act in active" class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
             <a href="#" class="t-none">
                 <div class="border-light radius-3 overflow-hidden ani">
                     <img :src="act.img" class="img-cover w-100 h-100">
@@ -64,7 +41,7 @@
                 </div>
             </a>
         </div>
-        <div class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
+        <!-- <div class="col-lg-3 col-sm-6 col-12 mb-5 mb-lg-0">
             <a href="#" class="t-none">
                 <div class="border-light radius-3 overflow-hidden ani">
                     <img src="https://picsum.photos/id/96/800/600" class="img-cover w-100 h-100">
@@ -93,7 +70,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
     </div>
     <div class="container row py-6">
         <div class="col-12">
@@ -422,5 +399,7 @@
         </div>
     </footer>
 </div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
