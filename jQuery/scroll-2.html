@@ -16,11 +16,18 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: rgba(34, 34, 34, 0.329);
+            background-color: transparent;
             padding-top: 10px;
             padding-bottom: 10px;
             position: fixed;
             width: 100%;
+
+            transition: .4s;
+        }
+        nav.active {
+            background-color: rgba(0,0,0,.7);
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         nav a {
             display: inline-block;
@@ -104,8 +111,10 @@
                 let h = $(window).scrollTop();
                 if(h > 600){
                     $('#gotop').addClass('active');
+                    $('nav').addClass('active');
                 }else{
                     $('#gotop').removeClass('active');
+                    $('nav').removeClass('active');
                 }
             })
         })
