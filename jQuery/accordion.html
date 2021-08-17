@@ -23,9 +23,10 @@
             border-bottom: 1px solid #000;
         }
         .accordion-content {
-            padding: 8px;
+            padding: 15px;
             background-color: #ccc;
             display: none;
+            border-bottom: 1px solid #777;
         }
     </style>
 </head>
@@ -34,15 +35,31 @@
         <h2 class="accordion-title">title 1</h2>
         <div class="accordion-content">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
         </div>
         <h2 class="accordion-title">title 2</h2>
         <div class="accordion-content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
         </div>
         <h2 class="accordion-title">title 3</h2>
         <div class="accordion-content">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis corporis animi iste sequi incidunt, ipsa harum porro deserunt? Eum blanditiis facere quisquam impedit, incidunt quo quidem explicabo magni ab laborum.</p>
         </div>
     </div>
+    <script>
+        $(function(){
+            $('.accordion-title').click(function(){
+                // $(this).next().toggle(600);
+                // $(this).next().fadeToggle();
+                $(this).next().slideToggle();
+            })
+
+        })
+    </script>
 </body>
 </html>
