@@ -17,19 +17,21 @@
     <div id="app">
         <nav class="bg-white d-flex justify-content-md-between align-items-md-center py-5 fixed w-100" style="z-index:999;">
             <a href="#" class="t-dark t-none mx-3 t-weight-800" style="font-size: 2em;">unipapa</a>
-            <div class="mr-auto d-none d-md-block">
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">居家清潔</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">防蚊防蟲</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">電器製品</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">雜貨日用品</a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">選物推薦</a>
+            <div class="collapse w-100 d-flex justify-content-between">
+                <div class="mr-auto">
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3">居家清潔</a>
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3">防蚊防蟲</a>
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3">電器製品</a>
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3">雜貨日用品</a>
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3">選物推薦</a>
+                </div>
+                <div>
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3"><i class="fas fa-search fa-lg"></i></a>
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3"><i class="fas fa-shopping-cart fa-lg"></i></i></a>
+                    <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-0 mx-md-3">登入</a>
+                </div>
             </div>
-            <div class=" d-none d-md-block">
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3"><i class="fas fa-search fa-lg"></i></a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3"><i class="fas fa-shopping-cart fa-lg"></i></i></a>
-                <a href="#" class="t-dark d-block d-md-inline-block my-3 t-none mx-3">登入</a>
-            </div>
-            <a href="#" class="absolute t-dark d-md-none d-block" style="top: 35px;right: 30px;"><i class="fas fa-bars fa-2x"></i></a>
+            <a href="#" class="absolute t-dark d-md-none d-block toggle-btn" style="top: 35px;right: 30px;"><i class="fas fa-bars fa-2x"></i></a>
         </nav>
         <header class="relative">
             <a href="#" class="d-block">
@@ -421,6 +423,24 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $(window).resize(function(){
+                let w = $(window).width();
+                // console.log(w);
+                if(w > 720){
+                    $('.collapse').show();
+                }else{
+                    $('.collapse').hide();
+                }
+            });
+            $('.toggle-btn').click(function(){
+                // $('.collapse').toggle(400)
+                $('.collapse').slideToggle(400)
+            })
+        })
+    </script>
 </div>
 </body>
 </html>
