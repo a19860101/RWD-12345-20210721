@@ -34,6 +34,12 @@
             padding: 8px 15px;
             text-decoration: none;
             color: #fff;
+            transition: .5s;
+        }
+        nav a.active {
+            background-color: #eeeeee;
+            color: #222;
+            border-radius: 5px;
         }
         #about,#product,#service,#contact {
             width: 100%;
@@ -80,7 +86,7 @@
 </head>
 <body>
     <nav>
-        <a href="#about" data-target="#about">About</a>
+        <a href="#about" data-target="#about" class="active">About</a>
         <a href="#product" data-target="#product">Product</a>
         <a href="#service" data-target="#service">Service</a>
         <a href="#contact" data-target="#contact">Contact</a>
@@ -100,6 +106,8 @@
                 $('body,html').animate({
                     scrollTop:offset
                 })
+                $('nav').find('a').removeClass('active');
+                $(this).addClass('active');
                 
             })
             $('#gotop').click(function(){
