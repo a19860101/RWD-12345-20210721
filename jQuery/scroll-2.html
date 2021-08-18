@@ -106,8 +106,8 @@
                 $('body,html').animate({
                     scrollTop:offset
                 })
-                $('nav').find('a').removeClass('active');
-                $(this).addClass('active');
+                // $('nav').find('a').removeClass('active');
+                // $(this).addClass('active');
                 
             })
             $('#gotop').click(function(){
@@ -124,7 +124,18 @@
                     $('#gotop').removeClass('active');
                     $('nav').removeClass('active');
                 }
+                //滾動監測
+                $('nav').find('a').each(function(){
+                    let target = $(this).data('target');
+                    let offset = $(target).offset().top;
+                    console.log(offset);
+                    if(h > offset - 100){
+                        $('nav').find('a').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                })
             })
+            
         })
     </script>
 </body>
