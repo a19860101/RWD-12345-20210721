@@ -99,6 +99,15 @@
                 $('.collapse').toggle(400);
                 // $('.collapse').slideToggle();
             })
+            $(window).resize(function(){
+                let w = $(window).width();
+                // console.log(w);
+                if(w > 720){
+                    $('.collapse').show();
+                }else{
+                    $('.collapse').hide();
+                }
+            });
         })
     </script>
 </body>

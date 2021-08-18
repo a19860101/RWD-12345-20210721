@@ -103,7 +103,17 @@
     </nav>
     <script>
         $(function(){
-            $('.collapse').hide();
+            $(window).resize(function(){
+                let w = $(window).width();
+                // console.log(w);
+                if(w > 720){
+                    $('.collapse').show();
+                }else{
+                    $('.collapse').hide();
+                }
+            });
+
+            
             $('.toggle-btn').click(function(){
                 $('.collapse').toggle(400);
                 // $('.collapse').slideToggle();
