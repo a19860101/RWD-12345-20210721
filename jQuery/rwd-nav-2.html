@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        nav {
+            width: 100%;
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: #222;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+        .collapse {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 15px 15px;
+        }
+        .toggle-btn {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        @media(min-width:720px){
+            nav {
+                width: 100%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                background-color: #222;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+            }
+            .collapse {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                flex-direction: row;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                padding: 0 15px;
+            }
+            .toggle-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">LOGO</a>
+        <div class="collapse">
+            <ul class="menu-left">
+                <li><a href="#">link 1</a></li>
+                <li><a href="#">link 2</a></li>
+                <li><a href="#">link 3</a></li>
+                <li><a href="#">link 4</a></li>
+            </ul>
+            <ul class="menu-right">
+                <li><a href="#">login</a></li>
+                <li><a href="#">register</a></li>
+            </ul>
+        </div>
+
+        <a href="#" class="toggle-btn"><i class="fas fa-bars fa-lg"></i></a>
+    </nav>
+    <script>
+        $(function(){
+            $('.collapse').hide();
+            $('.toggle-btn').click(function(){
+                $('.collapse').toggle(400);
+                // $('.collapse').slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>
