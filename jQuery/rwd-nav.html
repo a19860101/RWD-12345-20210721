@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
@@ -26,6 +28,10 @@
         nav .menu-left {
             margin-right: auto;
         }
+        nav .menu {
+            display: flex;
+            flex-direction: column;
+        }
         nav a {
             color: #fff;
             text-decoration: none;
@@ -38,6 +44,10 @@
             right: 0px;
             top: 0px;
         }
+        .collapse {
+            width: 100%;
+            display: none;
+        }
         @media(min-width:720px){
             nav {
                 flex-direction: row;
@@ -49,8 +59,16 @@
                 display: inline-block;
                 padding: 0 15px;
             }
+            nav .menu {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+            }
             .toggle-btn {
                 display: none;
+            }
+            .collapse {
+                display: block;
             }
         }
     </style>
@@ -58,17 +76,30 @@
 <body>
     <nav>
         <a href="#">LOGO</a>
-        <div class="menu-left">
-            <a href="#">link 1</a>
-            <a href="#">link 2</a>
-            <a href="#">link 3</a>
-            <a href="#">link 4</a>
+        <div class="collapse">
+            <div class="menu">
+                <div class="menu-left">
+                    <a href="#">link 1</a>
+                    <a href="#">link 2</a>
+                    <a href="#">link 3</a>
+                    <a href="#">link 4</a>
+                </div>
+                <div class="menu-right">
+                    <a href="#">login</a>
+                    <a href="#">register</a>
+                </div>
+            </div>
         </div>
-        <div class="menu-right">
-            <a href="#">login</a>
-            <a href="#">register</a>
-        </div>
+
         <a href="#" class="toggle-btn"><i class="fas fa-bars fa-lg"></i></a>
     </nav>
+    <script>
+        $(function(){
+            $('.toggle-btn').click(function(){
+                $('.collapse').toggle(400);
+                // $('.collapse').slideToggle();
+            })
+        })
+    </script>
 </body>
 </html>
