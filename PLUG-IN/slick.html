@@ -25,6 +25,16 @@
             width: 1200px;
             margin: auto;
         }
+        img {
+            margin: 0 15px;
+        }
+        .slick-slide {
+            opacity: .2;
+            transition:.5s;
+        }
+        .slick-slide.slick-current {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -49,10 +59,12 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                autoplay: true,
+                autoplay: false,
                 autoplaySpeed: 5000,
                 speed: 1600,
-                arrows: false
+                arrows: false,
+                centerMode: true,
+                centerPadding: '100px'
             });
         })
     </script>
