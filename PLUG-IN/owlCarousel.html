@@ -18,9 +18,6 @@
 
             box-sizing: border-box;
         }
-        body {
-            background-color: #1498f0;
-        }
         #slider {
             /* width: 1200px; */
             margin: auto;
@@ -47,7 +44,16 @@
     </div>
     <script>
         $(function () {
-            $('#slider').owlCarousel();
+            $('#slider').owlCarousel({
+                items:1,
+                margin: 0,
+                loop:true,
+                autoplay: true,
+                autoplaySpeed: 500,
+                autoplayTimeout: 3000,
+                center: false,
+                stagePadding: 100
+            });
         })
     </script>
 </body>
