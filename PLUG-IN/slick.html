@@ -18,7 +18,9 @@
 
             box-sizing: border-box;
         }
-
+        body {
+            background-color: #1498f0;
+        }
         #slider {
             width: 1200px;
             margin: auto;
@@ -33,10 +35,25 @@
         <img src="https://picsum.photos/id/35/1200/600" alt="">
         <img src="https://picsum.photos/id/36/1200/600" alt="">
         <img src="https://picsum.photos/id/37/1200/600" alt="">
+        <img src="https://picsum.photos/id/38/1200/600" alt="">
+        <img src="https://picsum.photos/id/39/1200/600" alt="">
+        <img src="https://picsum.photos/id/40/1200/600" alt="">
+        <img src="https://picsum.photos/id/41/1200/600" alt="">
+        <img src="https://picsum.photos/id/42/1200/600" alt="">
+        <img src="https://picsum.photos/id/43/1200/600" alt="">
+        <img src="https://picsum.photos/id/44/1200/600" alt="">
     </div>
     <script>
         $(function () {
-            $('#slider').slick();
+            $('#slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 1600,
+                arrows: false
+            });
         })
     </script>
 </body>
