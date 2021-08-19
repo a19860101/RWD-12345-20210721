@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        .container {
+            margin: auto;
+            width: 100%;
+        }
+        .box {
+            width: 250px;
+            margin: 5px;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.container').imagesLoaded(function(){
+                $('.container').masonry({
+                    isFitWidth: true
+                });
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="https://picsum.photos/id/45/800/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/46/400/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/47/500/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/48/900/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/49/450/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/50/800/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/51/400/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/52/500/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/53/900/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/54/450/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/55/800/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/56/400/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/57/500/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/58/900/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/59/450/600" alt="">
+        </div>
+        <div class="box">
+            <img src="https://picsum.photos/id/60/450/600" alt="">
+        </div>
+        
+    </div>
+</body>
+</html>
