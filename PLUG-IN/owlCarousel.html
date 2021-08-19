@@ -23,7 +23,13 @@
             margin: auto;
         }
 
-
+        .owl-item {
+            opacity: .5;
+            transition:.6s;
+        }
+        .owl-item.active{
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -48,11 +54,15 @@
                 items:1,
                 margin: 0,
                 loop:true,
-                autoplay: true,
-                autoplaySpeed: 500,
+                autoplay: false,
+                autoplaySpeed: 1000,
                 autoplayTimeout: 3000,
+                dots: true,
+                dotsSpeed: 1000,
                 center: false,
-                stagePadding: 100
+                stagePadding: 100,
+                nav: true,
+                navSpeed: 1000
             });
         })
     </script>
