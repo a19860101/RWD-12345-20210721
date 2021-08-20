@@ -39,6 +39,7 @@
     <!-- b1ecbccd638b763d489602917ba47cc3 -->
     <div class="container">
         <div>
+            <h2>請選擇城市</h2>
             <select name="" id="city">
                 <option>--請選擇--</option>
                 <option value="Taipei">台北</option>
@@ -53,9 +54,15 @@
     </div>
     <script>
         $(function(){
+            let city;
+            if(city == undefined){
+                $('.weather').hide();
+            }
             $('#city').change(function(){
                 // $('.weather').empty();
-                let city = $(this).val();
+                $('.weather').show();
+                city = $(this).val();
+                
                 $.ajax({
                 url:'https://api.openweathermap.org/data/2.5/weather',
                 data:{
