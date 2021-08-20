@@ -27,21 +27,25 @@
             font-size: 120px;
             color: #fff;
             /* background-color: #222; */
+            display: flex;
+        }
+        span {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div>
-        <h1 data-aos="fade-down">
-            <span>H</span>
-            <span>E</span>
-            <span>L</span>
-            <span>L</span>
-            <span>O</span>
+        <h1>
+            <span data-aos="fade-up-left" data-aos-duration="500" data-aos-easing="ease-in-out-quart" data-aos-delay="0">H</span>
+            <span data-aos="fade-up-left" data-aos-duration="500" data-aos-easing="ease-in-out-quart" data-aos-delay="200">E</span>
+            <span data-aos="fade-up-left" data-aos-duration="500" data-aos-easing="ease-in-out-quart" data-aos-delay="400">L</span>
+            <span data-aos="fade-up-left" data-aos-duration="500" data-aos-easing="ease-in-out-quart" data-aos-delay="600">L</span>
+            <span data-aos="fade-up-left" data-aos-duration="500" data-aos-easing="ease-in-out-quart" data-aos-delay="800">O</span>
         </h1>
     </div>
     <div>
-        <h1 data-aos="fade-down">WORLD</h1>
+        <h1 data-aos="flip-up">WORLD</h1>
     </div>
     <div>
         <h1 data-aos="fade-down">AOS</h1>
@@ -52,5 +56,76 @@
     <script>
         AOS.init();
     </script>
+    <!-- 
+        Fade animations:
+        fade
+        fade-up
+        fade-down
+        fade-left
+        fade-right
+        fade-up-right
+        fade-up-left
+        fade-down-right
+        fade-down-left
+        
+        Flip animations:
+        flip-up
+        flip-down
+        flip-left
+        flip-right
+
+        Slide animations:
+        slide-up
+        slide-down
+        slide-left
+        slide-right
+
+        Zoom animations:
+        zoom-in
+        zoom-in-up
+        zoom-in-down
+        zoom-in-left
+        zoom-in-right
+        zoom-out
+        zoom-out-up
+        zoom-out-down
+        zoom-out-left
+        zoom-out-right
+
+        Anchor placements:
+        top-bottom
+        top-center
+        top-top
+        center-bottom
+        center-center
+        center-top
+        bottom-bottom
+        bottom-center
+        bottom-top
+
+        Easing functions:
+        linear
+        ease
+        ease-in
+        ease-out
+        ease-in-out
+        ease-in-back
+        ease-out-back
+        ease-in-out-back
+        ease-in-sine
+        ease-out-sine
+        ease-in-out-sine
+        ease-in-quad
+        ease-out-quad
+        ease-in-out-quad
+        ease-in-cubic
+        ease-out-cubic
+        ease-in-out-cubic
+        ease-in-quart
+        ease-out-quart
+        ease-in-out-quart 
+
+        參考網址:https://easings.net/zh-tw
+-->
 </body>
 </html>
