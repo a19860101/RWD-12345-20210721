@@ -33,16 +33,28 @@
 <body>
     <!-- b1ecbccd638b763d489602917ba47cc3 -->
     <div class="container">
+        <div>
+            <select name="" id="city">
+                <option>--請選擇--</option>
+                <option value="Taipei">台北</option>
+                <option value="Tokyo">東京</option>
+                <option value="Bangkok">曼谷</option>
+                <option value="Seoul">首爾</option>
+            </select>
+        </div>
         <div class="weather">
             
         </div>
     </div>
     <script>
         $(function(){
-            $.ajax({
+            $('#city').change(function(){
+                // $('.weather').empty();
+                let city = $(this).val();
+                $.ajax({
                 url:'https://api.openweathermap.org/data/2.5/weather',
                 data:{
-                    q:'Taipei',
+                    q:city,
                     units:'metric',
                     lang:'zh_TW',
                     appid:'b1ecbccd638b763d489602917ba47cc3'
@@ -57,12 +69,17 @@
                         <div>體感溫度 ${data.main.feels_like} &deg;C</div>
                         <div>濕度 ${data.main.humidity}%</div>
                     `;
-                    $('.weather').append(content);
+                    // $('.weather').append(content);
+                    $('.weather').html(content);
+                    
+
                 },
                 error(){
                     console.log('error');
                 }
             })
+            });
+            
         })
     </script>
 </body>
