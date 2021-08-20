@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "SEgoe UI";
+        }
+        div {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to right top,red,blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 120px;
+            color: #fff;
+            /* background-color: #222; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 data-aos="fade-down">
+            <span>H</span>
+            <span>E</span>
+            <span>L</span>
+            <span>L</span>
+            <span>O</span>
+        </h1>
+    </div>
+    <div>
+        <h1 data-aos="fade-down">WORLD</h1>
+    </div>
+    <div>
+        <h1 data-aos="fade-down">AOS</h1>
+    </div>
+    <div>
+        <h1>ANIMATE!!</h1>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
