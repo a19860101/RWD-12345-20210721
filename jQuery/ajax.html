@@ -6,23 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
-
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #eee;
+        }
+        .weather {
+            padding: 15px;
+            border: 1px solid #c4c4c4;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 1px 1px 10px rgba(0,0,0,.2);
+        }
+    </style>
 </head>
 <body>
-    <!-- b1ecbccd638b763d489602917ba47cc3 -->
+    <!-- b1ecbccd638b763d489602917ba47cc3 -->z
+    <div class="container">
+        <div class="weather">
+            
+        </div>
+    </div>
     <script>
         $(function(){
             $.ajax({
                 url:'https://api.openweathermap.org/data/2.5/weather',
                 data:{
-                    q:'Bangkok',
+                    q:'Taipei',
                     units:'metric',
                     lang:'zh_TW',
                     appid:'b1ecbccd638b763d489602917ba47cc3'
                 },
                 dataType:'json',
                 success(data){
-                    console.log(data);
+                    console.log(data)
+                    let content = `
+                        <h1>現在天氣 ${data.main.temp} &deg;C ${data.weather[0].description}</h1>
+                        <div>最高溫 ${data.main.temp_max} &deg;C 最低溫 ${data.main.temp_min} &deg;C</div>
+                        <div>體感溫度 ${data.main.feels_like} &deg;C</div>
+                        <div>濕度 ${data.main.humidity}%</div>
+                    `;
+                    $('.weather').append(content);
                 },
                 error(){
                     console.log('error');
