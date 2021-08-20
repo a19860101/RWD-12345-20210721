@@ -52,6 +52,7 @@
                     console.log(data)
                     let content = `
                         <h1>現在天氣 ${data.main.temp} &deg;C ${data.weather[0].description}</h1>
+                        <img src=" http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
                         <div>最高溫 ${data.main.temp_max} &deg;C 最低溫 ${data.main.temp_min} &deg;C</div>
                         <div>體感溫度 ${data.main.feels_like} &deg;C</div>
                         <div>濕度 ${data.main.humidity}%</div>
