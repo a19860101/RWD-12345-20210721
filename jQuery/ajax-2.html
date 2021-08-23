@@ -42,6 +42,16 @@
         </div>
     </div>
     <script>
+        // timestamp 時間戳記
+        let myDate = new Date(1629709200 * 1000);
+        console.log(myDate);
+        console.log(myDate.getFullYear());
+        console.log(myDate.getMonth()+1);
+        console.log(myDate.getDate());
+        console.log(myDate.getDay());
+        console.log(myDate.getHours());
+        console.log(myDate.getMinutes());
+        console.log(myDate.getSeconds());
         $(function(){
             $('#city').change(function(){
                 $('.weather').empty();
@@ -54,13 +64,14 @@
                         units:'metric',
                         lang:'zh_TW',
                         appid:'b1ecbccd638b763d489602917ba47cc3',
-                        cnt: 2
+                        // cnt: 2
                     },
                     dataType:'json',
                     success(data){
                         // console.log(data.list)
                         data.list.forEach(function(w){
                             console.log(w)
+                            let myDate = new Date();
                             let content = `
                                 <h1>現在天氣 ${w.main.temp} &deg;C ${w.weather[0].description}</h1>
                                 <img src=" http://openweathermap.org/img/wn/${w.weather[0].icon}@2x.png">
