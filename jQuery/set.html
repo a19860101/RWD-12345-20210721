@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //set的值不會重複
+        let obj = new Set();
+        obj.add(1);
+        obj.add(2);
+        obj.add(3);
+        obj.add(3);
+        obj.add(3);
+        obj.add(4);
+        obj.add(4);
+        console.log(obj);
+        // let arr = Array.from(obj);
+        let arr = [...obj];
+        console.log(arr);
+
+        let city = ['台北市','新北市','桃園市','桃園市'];
+
+        let city_2 = new Set(city);
+        console.log(city_2);
+        
+        let city_3 = [...city_2];
+        console.log(city_3);
+
+        let final_city = [...new Set(city)];
+        console.log(final_city)
+    </script>
+</body>
+</html>
