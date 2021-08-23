@@ -9,6 +9,12 @@
 
 </head>
 <body>
+    <select name="" id="">
+        
+    </select>
+    <div class="container">
+
+    </div>
     <script>
         $(function(){
             $.ajax({
@@ -16,7 +22,18 @@
                 success(datas){
                     console.log(datas);
                     datas.records.forEach(data => {
-                        console.log(data['PM2.5']);
+                        let content = `
+                            <div>
+                                <div>觀測站 ${data.County} ${data.SiteName} </div>
+                                <div>空氣品質指標${data.AQI}</div>
+                                <div>一氧化碳${data.CO}</div>
+                                <div>一氧化氮${data.NO}</div>
+                                <div>二氧化氮${data.NO2}</div>
+                                <div>二氧化硫${data.SO2}</div>
+                                <hr>
+                            </div>
+                        `;
+                        $('.container').append(content);
                     })
                 }
             })
