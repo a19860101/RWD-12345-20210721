@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <select name="" id="">
+    <select name="" id="city">
 
     </select>
     <div class="container">
@@ -20,27 +20,33 @@
             $.ajax({
                 url:'https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json',
                 success(datas){
-                    console.log(datas);
+                    // console.log(datas);
                     let counties = datas.records.map(data => data.County);
-                    console.log(counties);
+                    // console.log(counties);
 
                     let result = [...new Set(counties)];
-                    console.log(result);
-
-                    datas.records.forEach(data => {
-                        let content = `
-                            <div>
-                                <div>觀測站 ${data.County} ${data.SiteName} </div>
-                                <div>空氣品質指標${data.AQI}</div>
-                                <div>一氧化碳${data.CO}</div>
-                                <div>一氧化氮${data.NO}</div>
-                                <div>二氧化氮${data.NO2}</div>
-                                <div>二氧化硫${data.SO2}</div>
-                                <hr>
-                            </div>
-                        `;
-                        $('.container').append(content);
+                    // console.log(result);
+                    result.forEach(data => {
+                        $('#city').append(`<option value=${data}>${data}</option>`);
                     })
+                    $('#city').change(function(){
+                        let c = $(this).val();
+                        console.log(c);
+                    })
+                    // datas.records.forEach(data => {
+                    //     let content = `
+                    //         <div>
+                    //             <div>觀測站 ${data.County} ${data.SiteName} </div>
+                    //             <div>空氣品質指標${data.AQI}</div>
+                    //             <div>一氧化碳${data.CO}</div>
+                    //             <div>一氧化氮${data.NO}</div>
+                    //             <div>二氧化氮${data.NO2}</div>
+                    //             <div>二氧化硫${data.SO2}</div>
+                    //             <hr>
+                    //         </div>
+                    //     `;
+                    //     $('.container').append(content);
+                    // })
                 }
             })
         })
