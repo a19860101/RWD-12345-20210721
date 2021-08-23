@@ -17,7 +17,19 @@
 
         }
         .weather {
-
+            display: flex;
+            flex-wrap: wrap;
+            width: 1200px;
+            margin: auto;
+        }
+        .weather-item {
+            width: calc(100% / 3 - 30px);
+            padding: 15px;
+            margin: 15px;
+            border: 1px solid #c4c4c4;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 1px 1px 10px rgba(0,0,0,.2);
         }
         #city {
             margin-bottom: 15px;
@@ -82,13 +94,16 @@
                             let hours = myDate.getHours();
                             let minutes= myDate.getMinutes();
                             let seconds = myDate.getSeconds();
+                            let ampm = hours > 12 ? '下午' : '上午';
                             let content = `
-                                <h1>${year}-${month}-${date} (${D_jp[day]})</h1>
-                                <h2>${hours}時 ${w.main.temp} &deg;C ${w.weather[0].description}</h2>
+                                <div class="weather-item">
+                                <h1>${year}-${month}-${date} (${D[day]})</h1>
+                                <h2>${ampm}${hours}時 ${w.main.temp} &deg;C ${w.weather[0].description}</h2>
                                 <img src=" http://openweathermap.org/img/wn/${w.weather[0].icon}@2x.png">
                                 <div>最高溫 ${w.main.temp_max} &deg;C 最低溫 ${w.main.temp_min} &deg;C</div>
                                 <div>體感溫度 ${w.main.feels_like} &deg;C</div>
                                 <div>濕度 ${w.main.humidity}%</div>
+                                </div>
                             `;
                             $('.weather').append(content);
                         })
